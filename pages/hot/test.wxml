@@ -1,0 +1,44 @@
+<!--pages/test/test.wxml-->
+<view class='hot' wx:for="{{messages.subjects}}" wx:key="index" data-name='{{item.title}}'   bindtap='goToDetails' data-info='{{item}}'>
+
+  <view class="smallPic">
+    <image mode='aspectFit' src='{{item.images.small}}' style='width:128rpx; height: 180rpx'></image>
+  </view>
+
+  <view class='movieMessage'>
+
+    <view class='movieName'>
+      {{item.title}} ({{item.year}})
+    </view>
+    <!-- <view class='movieYear'>
+    {{item.year}}
+    {{item.collect_count}}
+    {{item.genres}}
+    </view> -->
+    <!-- 评分做判断如果大于0显示评分数 如果等于0显示暂无评分 -->
+    <view>
+    <view class='grade' wx:if="{{item.rating.average > 0}}"><view class="type">观众评分</view> {{item.rating.average}}</view>
+    <view class='grade' wx:else>暂无评分</view>
+    </view>
+    <!-- 导演 -->
+    <view class='movieType'>
+      {{item.genres}}
+    </view>
+
+
+    <!-- 评分星级显示 -->
+    <view class="stra-grade">
+       <!-- <view wx:for='{{}}'></view> -->
+    </view>
+   <view class="star-name">主演：
+  <view class='star' wx:for='{{item.casts}}' wx:key="{{item.index}}">{{item.name}}</view>
+  </view>
+    <!-- <view wx:for="{{rating}}"> {{item.average}}</view> -->
+
+    <view wx:for="{{messages.subjects.directors}}" wx:key="index">
+      {{item.avatars.name}}
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+<view class='box'>
+  <image class='topImage' mode='aspectFit' src='/images/top.png'></image>
+</view>
+<view class='top' wx:for="{{top.subjects}}" wx:key="index" bindtap='goToDetails' data-info='{{item}}'>
+<view class="num">NO.{{index+1}}</view>
+<view class='box2' >
+  <view class='smallPic'>
+    <image mode='aspectFit' src='{{item.images.small}}' style='width:130rpx; height: 200rpx'></image>
+  </view>
+
+  <view class='movieMessage'>
+    <view class='movieName'>{{item.title}}</view>
+    <view class='types'>{{item.genres}}</view>
+    <view class='director'> 评分：{{item.rating.average}}</view>
+     <view class="star-name">主演：
+    <view class='star' wx:for='{{item.casts}}' wx:key="{{item.index}}">{{item.name}}</view>
+    </view>
+  </view>
+  </view>
+</view>

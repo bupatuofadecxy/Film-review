@@ -1,0 +1,22 @@
+<!--pages/future/index.wxml-->
+<view class='news' wx:for="{{newMessage.subjects}}" wx:key="index" bindtap='goToDetails' data-name='{{item.title}}' data-info='{{item}}'>
+
+  <view class='smallPic'>
+    <image mode='aspectFit' src='{{item.images.small}}' style='width:128rpx; height: 180rpx'></image>
+  </view>
+
+  <view class='movieMessage'>
+
+    <view class='movieName'>{{item.title}}</view>
+    <view class='types'>{{item.genres}}</view>
+    <!-- <view class="director" wx:for="{{item.directors}}" wx:key="{{item.index}}">导演{{item.name}}</view> -->
+    <view class="star-name">主演：
+    <view class='star' wx:for='{{item.casts}}' wx:key='{{item.index}}'>{{item.name}}</view>
+    </view>
+
+    <view class='movieTime'> {{item.mainland_pubdate}}上映</view>
+  
+
+  </view>
+  
+</view>

@@ -1,0 +1,214 @@
+/* pages/details/index.wxss */
+.details{
+ margin: 0rpx;
+}
+.top{
+  display: flex; 
+  width: 100%;
+  height: 400rpx;
+  /* border: 1rpx solid red; */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 高斯模糊背景 */
+.background{
+  /* border: 1px solid red; */
+  position: relative;
+  width: 100%;
+  height: 420rpx;
+}
+.blur{ 
+  width: 100%;
+  background: inherit;
+  filter: blur(15rpx); 
+  /* -webkit-filter: blur(30rpx); */
+}
+/* 内容 */
+.top-mes{
+  /* border:1rpx solid red; */
+  display: flex;
+  position: absolute;
+  align-items: center;
+  margin: auto 20rpx;
+  text-align: 1.5;
+}
+.movieMessage{
+  display: block;
+  /* border: 1rpx solid red; */
+  /* padding-top: 15rpx; */
+  padding-left: 30rpx;
+  color: rgb(247, 241, 241);
+  width: 70%;
+  height: 340rpx;
+  line-height:2;
+  font-size: 27rpx;
+  overflow: hidden;
+}
+.movieName{
+  overflow: hidden;
+  font-size: 45rpx;
+  color: #fff;
+  opacity: 1;
+  line-height: 1.5;
+  font-weight: bold;
+  font-family: Hiragino Sans GB;
+}
+.types{
+  font-size: 27rpx;
+}
+.movieMessage  .star{
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 20rpx;
+}
+.bottom{
+  margin: 20rpx;
+}
+.title{
+  font-size: 30rpx;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.intro{
+   font-size: 30rpx;
+   margin-top: 20rpx;
+   color: #494949;
+}
+.movie-actor{
+  margin-top:50rpx;
+  font-size: 30rpx;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.actor-list{
+  display: flex;
+  flex-direction: row;/*规定灵活项目的方向 行列排布*/
+  white-space: nowrap;/* /设置如何处理元素内的空白/ */
+}
+.actor{
+  display: inline-block;
+  margin: 0 15rpx; 
+}
+.actor-name{
+  /* 超出部分以省略号的形式显示 */
+  /* display:-webkit-box; */
+  width: 150rpx;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  /* 超出部分显示两行 */
+  /* -webkit-box-orient: vertical;
+  -web-line-clamp: 2; */
+  font-size: 27rpx;
+  line-height: 1.5;
+  text-align: left;
+  color:#494949;
+}
+.actor-type{
+  font-size: 25rpx;
+  line-height: 1.5;
+  text-align: left;
+  color: #aaa;
+}
+.intro{
+  display: -webkit-box;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+.hide{
+  display: -webkit-box;
+}
+.show{
+  display: block;
+}
+.button{
+  /* width: 20%; */
+  font-size: 25rpx;
+  /* text-align: center; */
+  color: #aaa;
+  float: right;
+ 
+}
+.prevue-photo{
+  margin-top:50rpx;
+  margin-bottom: 20rpx; 
+  font-size: 30rpx;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+/* 剧照样式 */
+.photos-list{
+  display: flex;
+  flex-direction: row;/*规定灵活项目的方向 行列排布*/
+  white-space: nowrap;/* /设置如何处理元素内的空白/ */
+}
+.stage-photo{
+  display: inline-block;
+  margin: 0 5rpx; 
+}
+/* 影评部分 */
+.film-preview{
+  margin-top:50rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.head-portrait{
+  border-radius: 50%;
+}
+.user-name{
+  /* text-align: center; */
+  font-size: 25rpx;
+  margin-top: -50rpx;
+  margin-left: 65rpx; 
+  color: #aaa;
+}
+.theTitle{
+  font-size: 30rpx;
+  font-weight: bold;
+  color:#494949;
+  margin: 15rpx 0;
+}
+.theText{
+  font-size: 27rpx;
+  line-height: 1.5;
+  margin: 10rpx 0;
+  color:#494949;
+  padding-bottom:20rpx; 
+  border-bottom: 1rpx solid rgba(119, 119, 119, 0.459);
+  margin-bottom: 20rpx;
+}
+
+/* ///// */
+/* .test{
+display: flex;
+}
+.test-text{
+  display: -webkit-box;
+  font-size: 30rpx;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+}
+.hide{
+  display: -webkit-box;
+}
+.show{
+  display: block;
+}
+.button{
+  width: 20%;
+  font-size: 30rpx;
+  text-align: center;
+  color: #aaa;
+  float: right;
+} */
+
+ 

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/hot/test",
+    "pages/future/index",
+    "pages/top/home",
+    "pages/details/index",
+    
+    "pages/movielist/index",
+    "component/recommend/recommend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e54847",
+    "navigationBarTitleText": "追影观评",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#e54847",
+    "list": [
+      {
+        "pagePath": "pages/hot/test",
+        "text": "正在热映",
+        "iconPath": "images/hot.png",
+        "selectedIconPath": "images/hots.png"
+      },
+      {
+        "pagePath": "pages/future/index",
+        "text": "即将上映",
+        "iconPath": "images/new.png",
+        "selectedIconPath": "images/news.png"  
+      },
+      {
+        "pagePath": "pages/top/home",
+        "text": "TOP榜",
+        "iconPath": "images/topt.png",
+        "selectedIconPath": "images/tops.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

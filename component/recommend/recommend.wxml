@@ -1,0 +1,19 @@
+<!--component/recommend/recommend.wxml-->
+<text>component/recommend/recommend.wxml</text>
+<view>选择地区</view>
+<view><slot>最近热映</slot>最近热映</view>
+<view class='hot' wx:for="{{messages.subjects}}" wx:key="index">
+  <view class="smallPic">
+    <image mode='aspectFit' src='{{item.images.small}}' style='width:150rpx; height: 250rpx'></image>
+  </view>
+  <view class='movieName'>
+    {{item.title}} {{item.original_title}}
+  </view>
+  <view>{{item.year}}</view>
+  {{item.collect_count}}
+  {{item.genres}}
+  <view wx:for="rating"> {{item.average}}</view>
+  <view wx:for="{{messages.subjects.directors}}" wx:key="index">
+    {{item.avatars.name}}
+  </view>
+</view>

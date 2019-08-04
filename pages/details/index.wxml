@@ -1,0 +1,105 @@
+<!--pages/details/index.wxml-->
+<view class='details'>
+
+  <view class='top'>
+   <!-- 高斯模糊 -->
+   <view class='background'>
+      <image class='blur' mode='aspectFill' src='{{messages.images.large}}'></image> 
+    </view>
+
+    <view class='top-mes'>
+      <image mode='aspectFit' src='{{messages.images.medium}}' style='width:300rpx; height: 340rpx'></image>
+    <view class='movieMessage'>
+
+      <view class='movieName'>{{messages.title}}</view>
+      <view class='movieEnglishName'>{{messages.original_title}}</view>
+      <view class='types'>{{messages.genres}}</view>
+      <view class='wanted'>({{messages.collect_count}}人看过)</view>
+      <view class=''> {{messages.countries}}/{{messages.durations}}</view>
+      <view  class=''>{{messages.mainland_pubdate}}大陆上映</view>
+      <view class='star' wx:for='{{item.casts}}' wx:key='index'>{{messages.name}}</view>
+      
+    </view>
+   </view>
+
+  </view>
+
+  <view class='bottom'>
+  <view>
+
+    <view class='title'>简介</view>
+    <view class="intro {{isFold?'show':'hide'}}">
+      {{messages.summary}}
+    </view>
+   <view class="button" bindtap='isFold'>{{editText}}</view>    
+  </view>
+
+  <view class="movie-actor">影人</view>
+
+  <scroll-view class='actor-list' scroll-x='true' scroll-left="100">
+    <!-- 循环列表 -->
+    <view class='actor' wx:for='{{messages.casts}}' wx:key='index'>
+      <!-- 演员图片 -->
+      <image class='actor-images' mode='aspectFit' src='{{item.avatars.small}}' style='width:150rpx; height: 250rpx'></image>
+      <view class='actor-name'> {{item.name}} </view>
+      <view class='actor-type'>演员</view>
+    </view>
+  </scroll-view>
+
+
+
+<!-- 热评 -->
+<view  class="prevue-photo">预告片/剧照</view>
+
+<scroll-view class='photos-list' scroll-x='true' scroll-with-animation="true" scroll-left='0' bindscroll="getleft">
+
+<!-- 剧照 -->
+<!-- 循环列表 -->
+
+
+<view class="stage-photo" wx:for="{{messages.photos}}" wx:key="index" bindtap='tapMove'>
+  <image mode='aspectFill' src='{{item.cover}}' style='width:450rpx; height: 300rpx'></image>
+</view>
+
+</scroll-view>
+
+<!-- 短评 -->
+<view class="film-preview">影评</view>
+<view class='info' wx:for="{{messages.popular_reviews}}" wx:key="index">
+    <image class="head-portrait" mode="aspectFill" src="{{item.author.avatar}}" style="width:50rpx; height: 50rpx"></image>
+    <view class="user-name">{{item.author.name}} </view>
+    <view class="theTitle">{{item.title}}</view>
+    <view class="theText">{{item.summary}}</view>
+</view>
+<!-- -->
+</view>
+
+
+
+<!-- 视频部分 -->
+<!-- <view class='prevue'>
+  <video  class="theVideo" src="{{messages.clip_urls}}"   controls  bindtap="bindButtonTap"></video>
+</view> -->
+
+  <!-- ///////////////////////////////////////// -->
+  <!-- 测试部分 -->
+  <!-- <scroll-view class='test' scroll-x='true'>
+<!-- 循环列表 -->
+  <!-- <view class='test-actor' wx:for='{{messages.casts}}' wx:key='index'> -->
+  <!-- 图片循环 -->
+  <!-- 演员部分 -->
+  <!-- <image class='test-image' mode='aspectFit' src='{{item.avatars.small}}' style='width:150rpx; height: 250rpx'></image>
+    <view>{{item.name}}</view>
+    <view></view>
+   </view>
+</scroll-view> -->
+
+  <!-- 新的测试部分 -->
+  <!-- <view class='test'>
+  <text class="test-text {{isFold?'show':'hide'}}">
+    飞房间卡了飞机而来发发色法尔范发疯安峰山粉色案发前二十阿里附近发打发打发是范德萨发放就开了房间爱离开房间爱卡房间爱疯爱疯飞房间卡了飞机而来发发色法尔范发疯安峰山粉色案发飞房间卡了飞机而来发发色法尔范发疯安峰山粉色案发
+    </text>
+  </view>
+   <button class="button" bindtap='isFold' size='mini'>{{editText}}</button> -->
+  <!-- 这个不能删 -->
+</view>
